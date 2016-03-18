@@ -4,6 +4,14 @@ Set back the clock for the global Date object to a time in the past (or the futu
 
 This is useful for making tests deterministic.
 
+[![Build Status](https://travis-ci.org/will123195/set-now.svg?branch=master)](https://travis-ci.org/will123195/set-now)
+
+## Install
+
+```
+npm install set-now
+```
+
 ## Usage
 
 ```js

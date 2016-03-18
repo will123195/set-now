@@ -25,7 +25,14 @@ test('instance of Date', function (t) {
   var date = new Date();
   t.ok(date instanceof Date, 'Date');
   t.end();
-})
+});
+
+test('new Date(time) is normal', function (t) {
+  Date.setNow('2000-01-02T00:00:00');
+  var date = new Date('1995-12-17T03:24:00');
+  t.equal(date.getTime(), 819170640000, 'normal date');
+  t.end();
+});
 
 test('revert', function (t) {
   Date.revert();

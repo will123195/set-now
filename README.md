@@ -18,22 +18,19 @@ npm install set-now
 require('set-now')
 
 Date.setNow('2016-03-17T12:00:00')
-
 new Date() // Thu Mar 17 2016 08:00:00 GMT-0400 (EDT)
 Date.now() // 1458216000000
 
+// wait 1 second
 setTimeout(function () {
   new Date() // Thu Mar 17 2016 08:00:01 GMT-0400 (EDT)
-
   Date.setNow() // reset the time back to normal
-
   new Date() // today's actual date
-
 }, 1000)
 ```
 
 ## Date.setNow( [time] )
 
-Wind back the clock to the specified time (or wind forward).
+Set the clock to the specified time.
 
-* `time` {String} (optional) the time you want it to be. If `time` is not specified, the time will be reset to the actual time.
+* `time` {String} (optional) The time you want it to be. If `time` is not specified, the clock will be reset to the actual time.

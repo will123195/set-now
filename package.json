@@ -1,7 +1,7 @@
 {
   "name": "set-now",
   "version": "1.0.2",
-  "description": "Sets the time so your time-sensitive tests are deterministic.",
+  "description": "Travel through time with Date.setNow()",
   "main": "index.js",
   "scripts": {
     "test": "node test"
@@ -10,5 +10,20 @@
   "license": "MIT",
   "devDependencies": {
     "tape": "^4.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/will123195/set-now.git"
+  },
+  "keywords": [
+    "Date",
+    "now",
+    "setNow",
+    "setTime",
+    "time"
+  ],
+  "bugs": {
+    "url": "https://github.com/will123195/set-now/issues"
+  },
+  "homepage": "https://github.com/will123195/set-now"
 }

@@ -1,6 +1,6 @@
 {
   "name": "set-now",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Travel through time with Date.setNow()",
   "main": "index.js",
   "scripts": {

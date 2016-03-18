@@ -25,7 +25,7 @@ Date = function Date () {
   }
 };
 
-Date.prototype = Object.create(_Date.prototype);
+Date.prototype = _Date.prototype;
 
 Date.now = function () {
   return new _Date(timestamp).getTime();

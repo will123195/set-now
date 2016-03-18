@@ -1,18 +1,16 @@
 var _Date = Date;
 
-var intervalMs = 1;
+var delta = 0;
 
-var timestamp = new _Date().getTime();
-
-var interval = setInterval(function () {
-  timestamp += intervalMs;
-}, intervalMs);
+var getTimestamp = function () {
+  return _Date.now() + delta;
+}
 
 Date = function Date () {
   if (arguments.length === 0) {
-    return new _Date(timestamp);
+    return new _Date(getTimestamp());
   }
-  // Unfortunately, Date.apply doesn't work
+  // Unfortunately, Date.apply doesn't work:
   // return _Date.apply(this, arguments);
   switch (arguments.length) {
     case 1: return new _Date(arguments[0]);
@@ -28,20 +26,16 @@ Date = function Date () {
 Date.prototype = _Date.prototype;
 
 Date.now = function () {
-  return new _Date(timestamp).getTime();
+  return new _Date(getTimestamp()).getTime();
 };
 
 Date.setNow = function (now) {
-  timestamp = new _Date(now).getTime();
+  if (typeof now === 'undefined') {
+    delta = 0;
+    return;
+  }
+  delta = (new _Date(now).getTime()) - _Date.now();
 };
 
-Date.revert = function () {
-  clearInterval(interval);
-  Date = _Date;
-}
-
-module.exports = {
-  interval: interval
-};
-
+module.exports = Date
 

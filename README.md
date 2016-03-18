@@ -23,7 +23,7 @@ Date.now() // 1458216000000
 setTimeout(function () {
   new Date() // Thu Mar 17 2016 08:00:01 GMT-0400 (EDT)
 
-  // rever the time back to normal
+  // revert the time back to normal
   Date.revert()
 
 }, 1000)

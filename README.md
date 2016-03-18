@@ -22,5 +22,21 @@ Date.now() // 1458216000000
 
 setTimeout(function () {
   new Date() // Thu Mar 17 2016 08:00:01 GMT-0400 (EDT)
+
+  // rever the time back to normal
+  Date.revert()
+
 }, 1000)
 ```
+
+## Date.setNow( time )
+
+Roll back (or forward) the clock to the specified time
+
+* time {String} the time you want it to be
+
+## Date.revert()
+
+Revert to the actual time and clear the internal interval
+
+Note: This module starts an interval behind the scenes to track what fake time it is. Your script may not end gracefully until you call `Date.revert()`.

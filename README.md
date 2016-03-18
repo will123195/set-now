@@ -1,10 +1,10 @@
 # set-now
 
-Adds `Date.setNow()` to JavaScript's gobal `Date` object.
+Adds `Date.setNow()` to JavaScript's global `Date` object.
 
 [![Build Status](https://travis-ci.org/will123195/set-now.svg?branch=master)](https://travis-ci.org/will123195/set-now)
 
-Wind back the clock to a time in the past (or in the future). This is useful for making tests deterministic.
+This is useful for making tests deterministic. Wind back the clock to a time in the past (or in the future).
 
 ## Install
 

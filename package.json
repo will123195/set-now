@@ -2,7 +2,7 @@
   "name": "set-now",
   "version": "2.0.1",
   "description": "Travel through time with Date.setNow()",
-  "main": "index.js",
+  "main": "set-now.js",
   "scripts": {
     "test": "node test"
   },

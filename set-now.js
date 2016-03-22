@@ -29,6 +29,10 @@ Date.now = function () {
   return new _Date(getTimestamp()).getTime();
 };
 
+Date.UTC = _Date.UTC;
+
+Date.parse = _Date.parse;
+
 Date.setNow = function (now) {
   if (typeof now === 'undefined') {
     delta = 0;
@@ -37,5 +41,5 @@ Date.setNow = function (now) {
   delta = (new _Date(now).getTime()) - _Date.now();
 };
 
-module.exports = Date
+module.exports = Date;
 
